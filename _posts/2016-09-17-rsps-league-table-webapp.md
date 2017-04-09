@@ -1,8 +1,8 @@
 ---
-published: true
 layout: post
-date: '2016-09-17 13:51 +0100'
 title: RSPS - League Table WebApp
+description: A little project I made for school.
+image: 
 ---
 ## Throwbacks.
 
