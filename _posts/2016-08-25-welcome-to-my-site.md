@@ -6,7 +6,7 @@ categories:
   - android
   - blog-post
 published: true
-description: It\'s even newer now.
+description: It's even newer now.
 image: null
 ---
 ## Hi there.
