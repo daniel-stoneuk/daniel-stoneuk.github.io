@@ -3,6 +3,8 @@ published: true
 layout: post
 date: '2016-09-27 23:14 +0100'
 title: Amazon Dash with Tasker
+description: Home automation.
+image: null
 ---
 ## Amazon-Hyphen. 
 
