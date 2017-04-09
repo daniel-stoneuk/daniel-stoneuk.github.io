@@ -5,6 +5,8 @@ date: '2016-08-26 21:06 +0200'
 title: Android Bottom Sheet with Dimmed Background
 categories:
   - android
+description: Developing Monitor for EnergyHive & Engage.
+image: null
 ---
 So, I was developing a new budget feature for Monitor for EnergyHive and Engage and needed a way to display the data without obstructing the current user interface. 
 
