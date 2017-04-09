@@ -3,6 +3,8 @@ published: true
 layout: post
 date: '2017-02-03 21:11 +0000'
 title: Managing Launcher Shortcuts
+description: Android Development can be painful at times.
+image: null
 ---
 ## Android Nougat
 
