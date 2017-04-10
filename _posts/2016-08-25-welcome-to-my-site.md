@@ -16,7 +16,7 @@ I currently have an Android app on the Play Store - [Monitor for EnergyHive and 
 
 > Monitor is a native and lightweight unofficial client for the EnergyHive and Efergy Engage Internet of Things platforms, beautifully designed with material design.
 
-[![monitorbanner](/assets/2016-08-25-monitorbanner.jpeg)][monitor]
+[![monitorbanner](/assets/images/posts/2016-08-25-monitorbanner.jpeg)][monitor]
 
 
 Please do check it out if you have an [EnergyHive][energyhive] or [Efergy][efergy] hub.

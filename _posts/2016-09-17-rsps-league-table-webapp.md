@@ -11,7 +11,7 @@ Around Christmas last year, my school form and I decided to host a league based 
 
 I worked with the [Materialize][] framework to make it look pretty, but the bulk of the logic was in the backend - in PHP and SQL. I incorporated a proper login system with randomly generated keys which would tie a person to a user account. You can check it out here: [rsps.daniel-stone.uk][rsps].
 
-![rsps1.png]({{site.baseurl}}/assets/rsps1.png)
+![rsps1.png]({{site.baseurl}}/assets/images/posts/rsps1.png)
 
 If you're not logged in (you won't be) all you will see is the main homepage. Here is a little snippet of the PHP code behind generating a tab. I grab the id's from the users table where the group is the currently iterating group and order them by alphabetical order or points depending on the users choice.
 
@@ -57,7 +57,7 @@ Maybe someday I will reuse it for a different league based competition. I hope t
 
 Oh, and I optimised it for mobile.
 
-![rsps.gif]({{site.baseurl}}/assets/rspsgif.gif){:.screenshot}
+![rsps.gif]({{site.baseurl}}/assets/images/posts/rspsgif.gif){:.screenshot}
 
 
 Catch you later,  

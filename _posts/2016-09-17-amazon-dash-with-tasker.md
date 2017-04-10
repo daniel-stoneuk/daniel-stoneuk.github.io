@@ -16,7 +16,7 @@ Setting up the Dash Button with the app was simple, and cancelling at the final 
 
 Works great... Until your internet dies. I don't know about you but I have to restart my WiFi router almost daily to avoid slowing down, which seems to break the ARP monitoring code. When trying it again today, I realised that I could utilise the pointless notification that appeared on my phone instead of ignorantly swiping it away. It works quicker, and works whenever my phone is on and connected to the internet. Essentially 24/7.
 
-![amazondash.gif]({{site.baseurl}}/assets/amazondash.gif)
+![amazondash.gif]({{site.baseurl}}/assets/images/posts/amazondash.gif)
 
 ## How?
 
@@ -39,7 +39,7 @@ Let's start off by downloading a few apps: [Tasker (£2.99)][tasker], [Notificat
 
 Open tasker, accept the disclaimer and then press the big `+` button at the bottom. Tap on Event > Plugin > Notification Listener > Notification Listener. Enter the plugin configuration by tapping the Edit icon. Select notification event "Posted" and select the Amazon Shopping app.
 
-![tasker-1.png]({{site.baseurl}}/assets/tasker-1.png){:.screenshot}
+![tasker-1.png]({{site.baseurl}}/assets/images/posts/tasker-1.png){:.screenshot}
 
 Tap the tick and move on. Press back to save the configuration and tap New Task & give it a name. 
 
@@ -47,7 +47,7 @@ Tap the tick and move on. Press back to save the configuration and tap New Task 
 
 Now we have intercepted the notification, we can clear it. Tap the `+` button and navigate back to the Notification Listner plugin. Tap on `Cancel notificaions` this time. Enter the configuration screen and choose "By title" in the dropdown. Enter `%nltitle` in the text field.
 
-![tasker-2.png]({{site.baseurl}}/assets/tasker-2.png){:.screenshot}
+![tasker-2.png]({{site.baseurl}}/assets/images/posts/tasker-2.png){:.screenshot}
 
 Save the configuration and proceed with step 3.
 
@@ -58,11 +58,11 @@ Awesome. We can now do whatever we like with the tasker task. I have my task set
 1. Create a notification to indicate that the Dash Button press was received.
 2. If my lights are on, then turn them off and replace the notification saying the lights were toggled.
 
-![tasker-3.png]({{site.baseurl}}/assets/tasker-3.png){:.screenshot}
+![tasker-3.png]({{site.baseurl}}/assets/images/posts/tasker-3.png){:.screenshot}
 
 The notification looks like this, in case you were wondering: 
 
-![tasker-4.png]({{site.baseurl}}/assets/tasker-4.png){:.screenshot}
+![tasker-4.png]({{site.baseurl}}/assets/images/posts/tasker-4.png){:.screenshot}
 
 Anyway, that rounds off this pretty long guide. I applaud you if you got this far, and I hope I've helped ya.
 

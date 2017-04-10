@@ -12,7 +12,7 @@ So, I was developing a new budget feature for Monitor for EnergyHive and Engage 
 
 I am going to do a complete redesign of the app sometime soon, but for now, this is how it looks:
 
-![device-monitor-current.png]({{site.baseurl}}/assets/device-monitor-current.png){: .screenshot}
+![device-monitor-current.png]({{site.baseurl}}/assets/images/posts/device-monitor-current.png){: .screenshot}
 
 As you can see, the design I have used doesn't leave much space for extra features. I'm in desperate need of a good UI designer.
 
@@ -23,7 +23,7 @@ Anyway. As always, the [Google Material Design Spec][materialdesignspec] is a go
 [materialdesignspec]: https://material.google.com
 [bottomsheetspec]: https://material.google.com/components/bottom-sheets.html
 
-![Bottom Sheet Basic Design]({{site.baseurl}}/assets/material_design_spec_components_bottom_sheets.png){: .screenshot}
+![Bottom Sheet Basic Design]({{site.baseurl}}/assets/images/posts/material_design_spec_components_bottom_sheets.png){: .screenshot}
 
 Essentially, a modal bottom sheet that contains normal interactive elements rather then a list. I was glad to see that official bottom sheet support was added to the [Android Support Library 23.2][androidsupportlibrary232] but after looking further into the implementation, what I wanted didn't look as simple as I thought it would be.
 
@@ -38,7 +38,7 @@ Ugly!
 
 I started playing with `FrameLayouts`, and `TouchEvents` to try and get the animation you see below. I'll go through the steps I went through, and explain briefly. 
 
-![Bottom Sheet Gif]({{site.baseurl}}/assets/bottomsheethires.gif){: .screenshot}
+![Bottom Sheet Gif]({{site.baseurl}}/assets/images/posts/bottomsheethires.gif){: .screenshot}
 
 ## Creating the Fragment
 
