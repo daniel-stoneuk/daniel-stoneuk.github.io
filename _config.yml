@@ -11,7 +11,7 @@ author: "Daniel Stone"
 
 # Homepage tiles
 tiles-source: posts # accepts "posts" or "pages"
-tiles-count: 6
+tiles-count: 10
 
 # Social settings
 500px_url:
