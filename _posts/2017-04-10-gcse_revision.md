@@ -3,7 +3,7 @@ published: false
 layout: post
 title: GCSE Revision
 description: Where have I been?
-image: assets/images/posts/gcse/image.png
+image: assets/images/posts/gcse/image.jpg
 ---
 GCSE revision is well underway - four and a half hours a day during the Easter break and then 1 and a half hours during the week up until study leave.
 
