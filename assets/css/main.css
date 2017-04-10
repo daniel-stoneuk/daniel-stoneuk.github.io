@@ -2789,7 +2789,7 @@ img{
 			}
 
 			.tiles article:hover:before {
-				opacity: 0.3;
+				opacity: 0.4;
 			}
 
 			.tiles article.is-transitioning {
