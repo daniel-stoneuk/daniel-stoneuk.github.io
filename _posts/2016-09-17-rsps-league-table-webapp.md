@@ -2,7 +2,8 @@
 layout: post
 title: RSPS - League Table WebApp
 description: A little project I made for school.
-image: 
+image: assets/pic04.jpg
+published: true
 ---
 ## Throwbacks.
 
