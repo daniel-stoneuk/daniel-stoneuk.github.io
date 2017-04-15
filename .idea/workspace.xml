@@ -41,8 +41,8 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+            <state relative-caret-position="298">
+              <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -364,7 +364,7 @@
       <workItem from="1491843154798" duration="1000" />
       <workItem from="1491843252187" duration="97000" />
       <workItem from="1492165586947" duration="132000" />
-      <workItem from="1492255123291" duration="287000" />
+      <workItem from="1492255123291" duration="517000" />
     </task>
     <task id="LOCAL-00001" summary="Added credit to unsplash">
       <created>1491843343108</created>
@@ -387,11 +387,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492255432909</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Strava">
+      <created>1492255497627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1492255497627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="883000" />
+    <option name="totallyTimeSpent" value="1113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1230" height="778" extended-state="0" />
@@ -425,7 +432,8 @@
     <MESSAGE value="Added credit to unsplash" />
     <MESSAGE value="Added strava" />
     <MESSAGE value="Updated strava" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated strava" />
+    <MESSAGE value="Strava" />
+    <option name="LAST_COMMIT_MESSAGE" value="Strava" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -722,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        <state relative-caret-position="298">
+          <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
           <folding />
         </state>
       </provider>
