@@ -41,12 +41,9 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="317">
+              <caret line="76" column="202" lean-forward="false" selection-start-line="76" selection-start-column="202" selection-end-line="76" selection-end-column="202" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,6 +128,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -366,7 +364,7 @@
       <workItem from="1491843154798" duration="1000" />
       <workItem from="1491843252187" duration="97000" />
       <workItem from="1492165586947" duration="132000" />
-      <workItem from="1492255123291" duration="104000" />
+      <workItem from="1492255123291" duration="222000" />
     </task>
     <task id="LOCAL-00001" summary="Added credit to unsplash">
       <created>1491843343108</created>
@@ -375,11 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491843343108</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added strava">
+      <created>1492255234695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1492255234695</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="700000" />
+    <option name="totallyTimeSpent" value="818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1230" height="778" extended-state="0" />
@@ -411,7 +416,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added credit to unsplash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added credit to unsplash" />
+    <MESSAGE value="Added strava" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added strava" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -446,10 +452,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -535,10 +538,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -714,12 +714,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="317">
+          <caret line="76" column="202" lean-forward="false" selection-start-line="76" selection-start-column="202" selection-end-line="76" selection-end-column="202" />
+          <folding />
         </state>
       </provider>
     </entry>
