@@ -29,3 +29,6 @@ markdown: kramdown
 
 sass:
   style: compressed
+  
+prose:
+siteurl: "http://daniel-stone.uk"
