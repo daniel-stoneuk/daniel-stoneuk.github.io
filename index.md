@@ -8,4 +8,9 @@ author: null
 published: true
 ---
 
-I'm a 16 year old guy currently working on a few Android projects, and GCSEs.
+I'm an advanced Android Developer with experience in RxJava, Retrofit and many new technologies. 
+
+
+After developing [Monitor][https://play.google.com/store/apps/details?id=com.danielstone.energyhive] I started looking into more advanced development techniques. Many apps, including [FastHub for GitHub][https://play.google.com/store/apps/details?id=com.fastaccess.github], use [material-about-library][https://github.com/daniel-stoneuk/material-about-library] - my first Android Library. 
+
+Get in touch today at [apps@daniel-stone.uk][mailto:apps@daniel-stone.uk].
