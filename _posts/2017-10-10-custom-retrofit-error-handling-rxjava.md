@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 categories:
   - android
   - blog-post
@@ -223,4 +223,3 @@ That's it. A lot of work for little gain, however, over time it should start to 
 I no longer need to worry about parsing the errors and can just check the error code, which stays constant. Worth it in my opinion. Let me know if you end up taking inspiration through [Twitter - @daniel_stoneuk](https://twitter.com/daniel_stoneuk).
 
 Dan
-
