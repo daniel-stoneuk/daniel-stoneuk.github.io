@@ -1,12 +1,12 @@
 ---
 published: false
----
 categories:
   - android
   - blog-post
-description: It's even newer now.
-image: assets/images/banner.jpg
-
+description: Retrofit and RxJava.
+image: assets/images/posts/error_handling.jpg
+layout: post
+---
 #Custom Error Handling with RxJava & Retrofit 2.
 
 Recently I started redeveloping my Android app** Monitor for EnergyHive** in order to try and take advantage of some of the new techniques that "modern Android devs" are using. I must say, the many hours of reading up and research was totally worth it - MVP keeps everything much simpler, Retrofit stops me from having to build API calls myself and RxJava handles threading - letting me focus on the code instead of **avoiding the dreaded memory leaks**.
