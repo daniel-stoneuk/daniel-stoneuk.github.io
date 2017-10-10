@@ -7,6 +7,7 @@ description: Retrofit and RxJava.
 image: assets/images/posts/error_handling.jpg
 layout: post
 date: '2017-10-10 11:51 +0000'
+title: Custom Error Handling with RxJava & Retrofit 2.
 ---
 ## Custom Error Handling with RxJava & Retrofit 2.
 
