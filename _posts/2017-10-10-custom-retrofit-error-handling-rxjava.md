@@ -15,24 +15,7 @@ Before I added RxJava, in an effort to modularise things, I made use of **Retrof
 
 ### ServiceCallback
 
-```java
-public abstract class ServiceCallback<T> implements Callback<T> {
-    @Override
-    public void onResponse(Call<T> call, Response<T> response) {
-        if (response.isSuccessful()) {
-            success(new ServiceResult<T>(response.body(), response));
-        } else {
-            failure(new ServiceApiException(response));
-        }
-    }
-    @Override
-    public void onFailure(Call<T> call, Throwable t) {
-        failure(new ServiceException("Request Failure", t));
-    }
-    public abstract void success(ServiceResult<T> result);
-    public abstract void failure(ServiceException exception);
-}
-```
+<script src="https://gist.github.com/daniel-stoneuk/f1306d9ae0b6551027d4bca20081b12a.js"></script>
 
 The **`ServiceCallback`** above takes the POJO that Retrofit will convert the JSON to. If the server sends a response, we can **handle the data in onResponse()** - for example we'll call the `success()` method if the HTTP Status code is 200. If this isn't the case, we'll call the `failure()` method passing a new instance of our custom `ApiException`. `ServiceResult` and `ServiceException` are both custom classes.
 
