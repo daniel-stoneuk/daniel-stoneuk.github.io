@@ -26,6 +26,8 @@ twitter_url: https://twitter.com/daniel_stoneuk
 
 # Build settings
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
 
 sass:
   style: compressed
