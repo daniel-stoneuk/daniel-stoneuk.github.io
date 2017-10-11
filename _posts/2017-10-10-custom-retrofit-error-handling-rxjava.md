@@ -21,81 +21,21 @@ The **`ServiceCallback`** above takes the POJO that Retrofit will convert the JS
 
 **`ServiceResult`** simply contains the parsed Object and the Okhttp Response object (in case response details are ever needed)
 
-```java
-public class ServiceResult<T> {
-    public final T data;
-    public final Response response;
-
-    public ServiceResult(T data, Response response) {
-        this.data = data;
-        this.response = response;
-    }
-}
-```
+<script src="https://gist.github.com/daniel-stoneuk/1d8786154466e7fbc5963ccf66067d8a.js"></script>
 
 We've made our own **subclass of `Exception`** that holds the message and cause. This form of Exception is called when there's an internet or other device related issue. ***If the server returns an error in its response, a subclass is returned (see below).***
 
-```java
-public class ServiceException extends Exception {
-    public ServiceException(String message) {
-        super(message);
-    }
-	...
-}
-```
+<script src="https://gist.github.com/daniel-stoneuk/dde3739847563a7813aab896c6bd8b55.js"></script>
 
 Let's say we make an call with incorrect parameters. The server will respond with an error message, and if it's a really good API, a **custom error code**.
 
-```java
-public class ServiceApiException extends ServiceException { 
-    public ServiceApiException(Response response) {
-        this(response, readApiError(response), DEFAULT_ERROR_CODE);
-    }
-    ServiceApiException(Response response, ApiError apiError, int apiErrorCode) {
-        super(createExceptionMessage(apiErrorCode));
-        this.apiError = apiError;
-        this.code = apiErrorCode;
-        this.response = response;
-    }
-    public static ApiError readApiError(Response response) {
-        ...
-        final String body = response.errorBody().source().buffer().clone().readUtf8();
-        ...
-        return parseApiError(body);
-    }
-
-    static ApiError parseApiError(String body) {
-        ...
-         final ApiError apiError = gson.fromJson(body, ApiError.class);
-         // Return my own ApiError.
-        ...
-    }
-	...
-}
-```
+<script src="https://gist.github.com/daniel-stoneuk/4f75a80aae73e2133c99c369e1fe10aa.js"></script>
 
 Okay. So that's a lot of code so far - hopefully you're still with me. Seeing the code for yourself makes it slightly easier to follow I hope.
 
 So now all that is done, we can actually use the `ServiceCallback`. We'll use it in place of `RetrofitCallback` in `.enqueue()`. We'll have the two methods - **success and failure** - we can override these and add our logic to. In the `failure` callback, we can check which type of `ServiceError` it is using `instanceof` and adjust our logic accordingly. We can even get the error message out of `ServiceApiException`.
 
-```java
-.enqueue(new ServiceCallback<DeviceResponse>() {
-    @Override
-    public void success(ServiceResult<DeviceResponse> result) {
-        // Success
-    }
-
-    @Override
-    public void failure(ServiceException exception) {
-        if (exception instanceof ServiceApiException) {
-            final ServiceApiException ServiceApiException = (ServiceApiException) exception;
-            setViewState(STATE_SERVICE_ERROR);
-        } else {
-            setViewState(STATE_INTERNET_ERROR);
-        }
-    }
-});
-```
+<script src="https://gist.github.com/daniel-stoneuk/162a88389b220bcde570cf02c29de854.js"></script>
 
 ## RxJava
 
@@ -103,103 +43,22 @@ As I said earlier, ReactiveX is a popular way of making asynchronous calls, ther
 
 I've structured my **singleton Service class** like this:
 
-```java
-public class Service {
-
-    Api api;
-
-    public Service(Retrofit retrofit) {
-        this.api = retrofit.create(Api.class);
-    }
-
-
-    public Call<LoginResponse> authenticate(String username, String password) {
-        return api.authenticate(new LoginRequest(username, password));
-    }
-
-    public Observable<LoginResponse> authenticateRx(String username, String password) {
-        ...
-    }
-
-    public Api getApi() {
-        return api;
-    }.
-
-    public interface Api {
-        @POST("auth")
-        Call<LoginResponse> authenticate(@Body LoginRequest loginRequest);
-        @POST("auth")
-        Observable<LoginResponse> authenticateRx(@Body LoginRequest loginRequest);
-    }
-}
-```
+<script src="https://gist.github.com/daniel-stoneuk/c7fc853e2c6060942d54ef6c7f6b2500.js"></script>
 
 The code above simplifies the process of making an API call, and it also mean that you can change the parameters before making the call. Usually Rx Calls don't send the response data to the onError callback. **We need to come up with our own way** of intercepting the response. The solution? Create our own `ErrorHandlingFunction` thats used in **`.onErrorResumeNext()`**
 
 ### MyRxErrorHandlerFunction
 This takes a **copy of the `Observable`** and checks for all the different kinds of errors that are possible (for example, an HTTP Error). When each one is found it returns a new `Observable` with the one of our `ServiceException`'s. It looks similar to our custom Callback seen above.
 
-```java
-  private class MyRxErrorHandlerFunction<T> implements Function<Throwable, ObservableSource<? extends T>> {
-        @Override
-        public ObservableSource<? extends T> apply(Throwable throwable) throws Exception {
-            if (throwable instanceof HttpException) {
-                HttpException httpException = (HttpException) throwable;
-                if (httpException.response().isSuccessful()) {
-                    return Observable.error(new ServiceException("Parsing error occurred"));
-                } else {
-                    return Observable.error(new ServiceApiException(httpException.response()));
-                }
-            }
-            return Observable.error(new ServiceException("Connection Error - " + throwable.getMessage()));
-        }
-    }
-```
+<script src="https://gist.github.com/daniel-stoneuk/71d4f5350706850f09739e640ff1af46.js"></script>
 
 There are other ways of intercepting the error, however the method shown above **should not affect any other operations** being performed on the `Observable`. Now we just need to add it to the Service class (since it was ommitted above). Also, in order to reduce further boilerplate code I have set the thread for `.subscribeOn()` here.
 
-```java
-public Observable<LoginResponse> authenticateRx(String username, String password) {
-      return api.authenticateRx(new LoginRequest(username, password))
-              .subscribeOn(Schedulers.io())
-              .onErrorResumeNext(new MyRxErrorHandlerFunction<LoginResponse>());
-}
-```
+<script src="https://gist.github.com/daniel-stoneuk/fd61141f77645569d31d3bc1eaa069a5.js"></script>
 
 Now we can use the `Observable` returned from the `authenticateRx` method like we would for any other `Observable`.
 
-```java
-  .getApiService()
-  // Create the request
-  .authenticateRx("daniel", "password")
-  .observeOn(AndroidSchedulers.mainThread()) // Rx
-  .subscribe(new Observer<ResourceReadingsResponse>() {
-     @Override
-     public void onSubscribe(Disposable d) {
-		// Do what you like with the disposable (eg add it to a list)
-     }
-	 // Called when the response was successful and no errors occurred
-     @Override
-     public void onNext(LoginResponse response) {
-     	useData(response)
-     }
-
-     @Override
-     public void onError(Throwable e) {
-   		if (e instanceof ServiceApiException) {
-  			ServiceApiException serviceApiException = (ServiceApiException) e;
-  			// Might log "Invalid Resource Id"
-		} else if (e instanceof GlowException) {
-  			ServiceException serviceException = ((ServiceException) e);
-  			// Might log "Connection Error"
-		}
-     }
-
-     @Override
-     public void onComplete() {
-     }
-  });
-```
+<script src="https://gist.github.com/daniel-stoneuk/b37660b4c830acc1b9181aa993f564b2.js"></script>
 
 That's it. A lot of work for little gain, however, over time it should start to pay off. If the server has a certain error format you can adapt to it, if the response request changes you can change it in one place and be done with it. Etc. 
 
