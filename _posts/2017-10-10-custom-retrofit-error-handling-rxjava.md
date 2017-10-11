@@ -203,11 +203,11 @@ Now we can use the `Observable` returned from the `authenticateRx` method like w
 
      @Override
      public void onError(Throwable e) {
-   		if (e instanceof GlowApiException) {
-  			GlowApiException glowApiException = (GlowApiException) e;
+   		if (e instanceof ServiceApiException) {
+  			ServiceApiException serviceApiException = (ServiceApiException) e;
   			// Might log "Invalid Resource Id"
 		} else if (e instanceof GlowException) {
-  			GlowException glowException = ((GlowException) e);
+  			ServiceException serviceException = ((ServiceException) e);
   			// Might log "Connection Error"
 		}
      }
